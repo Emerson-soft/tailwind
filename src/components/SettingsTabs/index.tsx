@@ -3,6 +3,7 @@
 import * as Tabs from '@radix-ui/react-tabs'
 import { TabItem } from './TabItem'
 import { useState } from 'react'
+import { Details } from './Tabs/Datatils'
 
 export function SettingsTabs() {
   const [currentTab, setCurrentTab] = useState('tab1')
@@ -54,8 +55,8 @@ export function SettingsTabs() {
         />
       </Tabs.List>
 
-      <Tabs.Content value="tab1">
-        <p>my-details</p>
+      <Tabs.Content className="mb-6 flex flex-col " value="tab1">
+        <Details />
       </Tabs.Content>
 
       <Tabs.Content value="tab2">
