@@ -1,9 +1,11 @@
 'use client'
 
+import { useState } from 'react'
+
 import * as Tabs from '@radix-ui/react-tabs'
 import { TabItem } from './TabItem'
-import { useState } from 'react'
 import { Details } from './Tabs/Datatils'
+import { Profile } from './Tabs/Profile'
 
 export function SettingsTabs() {
   const [currentTab, setCurrentTab] = useState('tab1')
@@ -60,7 +62,7 @@ export function SettingsTabs() {
       </Tabs.Content>
 
       <Tabs.Content value="tab2">
-        <p>Profile</p>
+        <Profile />
       </Tabs.Content>
 
       <Tabs.Content value="tab3">
