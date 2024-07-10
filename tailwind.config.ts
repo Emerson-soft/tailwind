@@ -26,6 +26,22 @@ const config: Config = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+
+      keyframes: {
+        slideDownAndFade: {
+          from: { opacity: '0', transform: 'translateY(-50px)' },
+          to: { opacity: '1', transform: 'translateY(0)' },
+        },
+        slideUpAndFade: {
+          from: { opacity: '1' },
+          to: { opacity: '0' },
+        },
+      },
+      animation: {
+        slideDownAndFade:
+          'slideDownAndFade 400ms cubic-bezier(0.16, 1, 0.3, 1)',
+        slideUpAndFade: 'slideUpAndFade 3s linear',
+      },
     },
   },
   plugins: [require('@tailwindcss/typography')],
